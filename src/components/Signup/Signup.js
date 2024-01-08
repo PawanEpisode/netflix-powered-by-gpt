@@ -3,13 +3,12 @@ import Header from "../Header";
 import { Link, redirect } from "react-router-dom";
 
 const Signup = ({ isSignInForm, setIsSignInForm }) => {
-
-    const handleGetStarted = () => {
-        redirect('/signup');
-    }
+  const handleGetStarted = () => {
+    redirect("/signup");
+  };
   return (
     <div className="w-full h-full absolute">
-        <Header isSignInForm={isSignInForm} setIsSignInForm={setIsSignInForm} />
+      <Header isSignInForm={isSignInForm} setIsSignInForm={setIsSignInForm} />
       <div className="w-full relative h-full">
         <div className="absolute">
           <img
@@ -30,20 +29,17 @@ const Signup = ({ isSignInForm, setIsSignInForm }) => {
               Watch anywhere. Cancel anytime.
             </p>
           </div>
-          <div className="my-6 flex flex-col justify-center items-center">
+          <div className="my-6 flex gap-4 flex-col justify-center items-center">
             <h1 className="text-lg font-normal">
               Ready to watch? Enter your email to create or restart your
               membership.
             </h1>
-            <div className="w-10/12 flex gap-3 px-16 py-4">
-                <input
-                type="text"
-                placeholder="Email Address"
-                className="px-2 outline-none border border-[#rgb(128 128 128 / 70%)] focus:border-4 focus:border-white flex-1 bg-[#333] bg-opacity-80 rounded-md"
-                />
-                <Link to={'/signup'}
-                className="p-4 hover:bg-red-700 bg-red-600 text-3xl font-bold rounded-lg">{`Get Started >`}</Link>
-            </div>
+            <Link
+              to={"/signup"}
+              className="p-4 hover:bg-red-700 bg-red-600 text-3xl font-bold rounded-lg"
+            >
+              {`Get Started >`}
+            </Link>
           </div>
         </div>
       </div>
